@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+$df-primary: hsl(215, 84%, 10%);
+$df-accent: hsl(180, 58%, 45%);
+
 // If need, change your variables before importing Bulma
+$primary: $df-accent;
 
 @import "~bulma/bulma.sass";

@@ -2,6 +2,8 @@ import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import { BsChatQuoteFill } from "react-icons/bs";
 
+import styles from "./header-brand.module.css";
+
 function HeaderBrand() {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -14,12 +16,9 @@ function HeaderBrand() {
   `);
 
   return (
-    <div>
-      <BsChatQuoteFill size={24} />
-      &nbsp;&nbsp;
-      <span style={{ fontSize: 20 }}>
-        {data.site.siteMetadata?.title ?? ""}
-      </span>
+    <div className={styles.root}>
+      <BsChatQuoteFill className={styles.icon} />
+      <div className={styles.name}>{data.site.siteMetadata?.title ?? ""}</div>
     </div>
   );
 }

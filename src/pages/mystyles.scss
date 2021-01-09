@@ -7,3 +7,11 @@ $df-accent: hsl(180, 58%, 45%);
 $primary: $df-accent;
 
 @import "~bulma/bulma.sass";
+
+dialog-form {
+  /* `flex` seems to work best. `inline-block` (this is what this element
+   * currently uses), or even `block` lead to a tiny bit of extra vertical
+   * whitespace at the bottom, which is unwanted.
+   */
+  display: flex !important;
+}

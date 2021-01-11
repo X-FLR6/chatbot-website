@@ -23,8 +23,12 @@ function DemoChat() {
   }
 
   useEffect(() => {
-    let id = getCurrentIdentifier() || generateIdentifier();
-    setIdentifier(id);
+    // CHATREFRESH: Uncomment when you want to bring back chat refresh
+    // let id = getCurrentIdentifier() || generateIdentifier();
+    // setIdentifier(id);
+
+    // CHATREFRESH: Remove line when you want to bring back chat refresh
+    setIdentifier("some-dummy");
   }, []);
 
   if (!identifier) return null;
@@ -32,23 +36,26 @@ function DemoChat() {
     <div key={identifier} className={styles.root}>
       {isLocalStorageAvailable() ? (
         <div className={styles.meat}>
-          <div className={classNames(styles.meat_topBar, "py-2")}>
-            <button
-              className="button is-small"
-              onClick={() => {
-                const id = generateIdentifier();
-                setIdentifier(id);
-              }}
-            >
-              Reset
-            </button>
-          </div>
+          {/* CHATREFRESH: Uncomment when you want to bring back chat refresh */}
+          {/*<div className={classNames(styles.meat_topBar, "py-2")}>*/}
+          {/*  <button*/}
+          {/*    className="button is-small"*/}
+          {/*    onClick={() => {*/}
+          {/*      const id = generateIdentifier();*/}
+          {/*      setIdentifier(id);*/}
+          {/*    }}*/}
+          {/*  >*/}
+          {/*    Reset*/}
+          {/*  </button>*/}
+          {/*</div>*/}
           <div className={styles.meat_iframe}>
             <dialog-form
               flow-id="1"
               width="100%"
               height="100%"
-              user-identifier={identifier}
+              // CHATREFRESH: Uncomment when you want to bring back chat refresh
+              // user-identifier={identifier}
+              dry-run // CHATREFRESH: Remove when you want to bring back chat refresh
               settings-show-score
               server="https://share.dialogform.in"
             />

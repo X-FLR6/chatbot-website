@@ -68,7 +68,7 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
-      <script src="https://unpkg.com/@xflr6/chatbot-embed-lib@0.0.4/dist/umd.js" />
+      <script src="https://unpkg.com/@xflr6/chatbot-embed-lib@0.0.5/dist/umd.js" />
     </Helmet>
   );
 }

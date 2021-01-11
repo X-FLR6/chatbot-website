@@ -1,13 +1,10 @@
 import "./mystyles.scss";
 
-import classNames from "classnames";
 import React from "react";
 
-import DemoChat from "../components/demo-chat";
 import DemoChatButton from "../components/demo-chat-button";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import styles from "./index.module.css";
 
 function IndexPage() {
   return (
@@ -34,10 +31,7 @@ function IndexPage() {
       </div>
       <section className="section is-flex is-flex-direction-column is-align-items-center">
         <h3 className="title">Here&apos;s an Example</h3>
-        <DemoChatButton className="is-hidden-tablet" />
-        <div className={classNames(styles.demoChatHolder, "is-hidden-mobile")}>
-          <DemoChat />
-        </div>
+        <DemoChatButton />
       </section>
       <section className="section has-background-light">
         <div className="container">

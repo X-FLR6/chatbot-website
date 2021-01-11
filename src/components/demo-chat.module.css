@@ -1,0 +1,25 @@
+.root {
+  height: 100%;
+}
+
+.meat {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.meat_topBar {
+  flex-shrink: 0;
+}
+
+.meat_iframe {
+  flex: 1 1 auto;
+}
+
+.notification {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

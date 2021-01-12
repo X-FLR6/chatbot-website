@@ -67,9 +67,7 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    >
-      <script src="https://unpkg.com/@xflr6/chatbot-embed-lib@0.0.5/dist/umd.js" />
-    </Helmet>
+    />
   );
 }
 

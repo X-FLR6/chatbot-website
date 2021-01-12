@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { v4 as uuidV4 } from "uuid";
 
 import { isLocalStorageAvailable } from "../utils/browser-storage";
@@ -49,16 +50,24 @@ function DemoChat() {
           {/*  </button>*/}
           {/*</div>*/}
           <div className={styles.meat_iframe}>
-            <dialog-form
-              flow-id="1"
-              width="100%"
-              height="100%"
-              // CHATREFRESH: Uncomment when you want to bring back chat refresh
-              // user-identifier={identifier}
-              dry-run // CHATREFRESH: Remove when you want to bring back chat refresh
-              settings-show-score
-              server="https://share.dialogform.in"
-            />
+            <>
+              <dialog-form
+                flow-id="1"
+                width="100%"
+                height="100%"
+                // CHATREFRESH: Uncomment when you want to bring back chat refresh
+                // user-identifier={identifier}
+                dry-run // CHATREFRESH: Remove when you want to bring back chat refresh
+                settings-show-score
+                server="https://share.dialogform.in"
+              />
+              <Helmet>
+                <script
+                  async
+                  src="https://unpkg.com/@xflr6/chatbot-embed-lib@0.0.6/dist/umd.js"
+                />
+              </Helmet>
+            </>
           </div>
         </div>
       ) : (

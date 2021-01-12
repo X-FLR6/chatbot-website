@@ -24,12 +24,8 @@ function DemoChat() {
   }
 
   useEffect(() => {
-    // CHATREFRESH: Uncomment when you want to bring back chat refresh
-    // let id = getCurrentIdentifier() || generateIdentifier();
-    // setIdentifier(id);
-
-    // CHATREFRESH: Remove line when you want to bring back chat refresh
-    setIdentifier("some-dummy");
+    let id = getCurrentIdentifier() || generateIdentifier();
+    setIdentifier(id);
   }, []);
 
   if (!identifier) return null;
@@ -37,34 +33,30 @@ function DemoChat() {
     <div key={identifier} className={styles.root}>
       {isLocalStorageAvailable() ? (
         <div className={styles.meat}>
-          {/* CHATREFRESH: Uncomment when you want to bring back chat refresh */}
-          {/*<div className={classNames(styles.meat_topBar, "py-2")}>*/}
-          {/*  <button*/}
-          {/*    className="button is-small"*/}
-          {/*    onClick={() => {*/}
-          {/*      const id = generateIdentifier();*/}
-          {/*      setIdentifier(id);*/}
-          {/*    }}*/}
-          {/*  >*/}
-          {/*    Reset*/}
-          {/*  </button>*/}
-          {/*</div>*/}
+          <div className={classNames(styles.meat_topBar, "py-2")}>
+            <button
+              className="button is-small"
+              onClick={() => {
+                const id = generateIdentifier();
+                setIdentifier(id);
+              }}
+            >
+              Reset
+            </button>
+          </div>
           <div className={styles.meat_iframe}>
             <>
               <dialog-form
                 flow-id="1"
                 width="100%"
                 height="100%"
-                // CHATREFRESH: Uncomment when you want to bring back chat refresh
-                // user-identifier={identifier}
-                dry-run // CHATREFRESH: Remove when you want to bring back chat refresh
+                user-identifier={identifier}
                 settings-show-score
-                server="https://share.dialogform.in"
               />
               <Helmet>
                 <script
                   async
-                  src="https://unpkg.com/@xflr6/chatbot-embed-lib@0.0.5/dist/umd.js"
+                  src="https://unpkg.com/@xflr6/chatbot-embed-lib@0.0.8/dist/umd.js"
                 />
               </Helmet>
             </>

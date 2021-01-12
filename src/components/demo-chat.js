@@ -64,7 +64,7 @@ function DemoChat() {
               <Helmet>
                 <script
                   async
-                  src="https://unpkg.com/@xflr6/chatbot-embed-lib@0.0.6/dist/umd.js"
+                  src="https://unpkg.com/@xflr6/chatbot-embed-lib@0.0.5/dist/umd.js"
                 />
               </Helmet>
             </>

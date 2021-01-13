@@ -2,6 +2,8 @@ import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import React from "react";
 
+import styles from "./admin-screenshot.module.css";
+
 /**
  * This component is built using `gatsby-image` to automatically serve optimized
  * images with lazy loading and reduced file sizes. The image is loaded using a
@@ -12,12 +14,12 @@ import React from "react";
  * - `gatsby-image`: https://gatsby.dev/gatsby-image
  * - `useStaticQuery`: https://www.gatsbyjs.com/docs/use-static-query/
  */
-function Image() {
+function AdminScreenshot() {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      placeholderImage: file(relativePath: { eq: "admin-screenshot.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -29,7 +31,12 @@ function Image() {
     return <div>Picture not found</div>;
   }
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />;
+  return (
+    <Img
+      fluid={data.placeholderImage.childImageSharp.fluid}
+      className={styles.img}
+    />
+  );
 }
 
-export default Image;
+export default AdminScreenshot;

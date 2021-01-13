@@ -37,7 +37,7 @@ function DemoChatButton({ className }) {
         className={classNames("button is-large", className)}
         onClick={() => setIsModalActive(true)}
       >
-        Launch Example
+        See Example Content
       </button>
     </>
   );

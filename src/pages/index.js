@@ -3,6 +3,7 @@ import "./mystyles.scss";
 import classNames from "classnames";
 import React from "react";
 
+import AdminScreenshot from "../components/admin-screenshot";
 import DemoChatButton from "../components/demo-chat-button";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -12,7 +13,7 @@ function IndexPage() {
   return (
     <Layout>
       <SEO title="Home" />
-      <section className="hero is-medium is-primary is-bold">
+      <section className="hero is-primary is-bold">
         <div className="hero-body">
           <div className="container">
             <h1 className="title">DialogForm</h1>
@@ -22,25 +23,32 @@ function IndexPage() {
           </div>
         </div>
       </section>
-      <div className="hero has-background-primary-light has-text-primary-dark">
-        <div className="hero-body is-flex is-justify-content-center">
-          <ul
-            className={classNames(
-              styles.introFeatures,
-              "is-size-5 is-size-4-tablet"
-            )}
-          >
-            <li>Delight users with highly interactive content</li>
-            <li>Leverage user responses to determine content flow</li>
-            <li>Get deep insights into every user&apos;s learning journey</li>
-          </ul>
+      <div className="section has-background-primary-light has-text-primary-dark">
+        <div className={classNames(styles.screenshotContainer, "container")}>
+          <div className="columns">
+            <div className="column is-10-widescreen is-offset-1-widescreen is-8-fullhd is-offset-2-fullhd">
+              <AdminScreenshot />
+            </div>
+          </div>
+          <div className="block" />
+          <div className="is-flex is-flex-direction-column is-align-items-center">
+            <ul
+              className={classNames(
+                styles.introFeatures,
+                "is-size-5 is-size-4-tablet"
+              )}
+            >
+              <li>Delight users with highly interactive content</li>
+              <li>Leverage user responses to determine content flow</li>
+              <li>Get deep insights into every user&apos;s learning journey</li>
+            </ul>
+            <div className="block" />
+            <div className="block" />
+            <DemoChatButton />
+          </div>
         </div>
       </div>
-      <section className="section is-flex is-flex-direction-column is-align-items-center">
-        <h3 className="title">Here&apos;s an Example</h3>
-        <DemoChatButton />
-      </section>
-      <section className="section has-background-light">
+      <section className="section">
         <div className="container">
           <h3 className="title has-text-centered">Why We Made This</h3>
           <p className="block">

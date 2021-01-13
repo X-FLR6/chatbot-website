@@ -6,7 +6,10 @@ import React from "react";
 import AdminScreenshot from "../components/admin-screenshot";
 import DemoChatButton from "../components/demo-chat-button";
 import Layout from "../components/layout";
+import MemberProfile from "../components/member-profile";
 import SEO from "../components/seo";
+import amarnathPic from "../images/amarnath.png";
+import saumyaPic from "../images/saumya.png";
 import styles from "./index.module.css";
 
 function IndexPage() {
@@ -50,7 +53,7 @@ function IndexPage() {
       </div>
       <section className="section">
         <div className="container">
-          <h3 className="title has-text-centered">Why We Made This</h3>
+          <h3 className="title has-text-centered">Motivation</h3>
           <p className="block">
             We&apos;re a small group of educators and computer scientists,
             working on creating high quality digital learning content.
@@ -71,8 +74,28 @@ function IndexPage() {
           </p>
         </div>
       </section>
+      <section className="section">
+        <div className="container">
+          <div className="columns">
+            <div className="column">
+              <MemberProfile
+                imageUrl={saumyaPic}
+                name="Saumya Kanoria"
+                description="Cornell University, U of Illinois Urbana Champaign, computer scientist, entrepreneur"
+              />
+            </div>
+            <div className="column">
+              <MemberProfile
+                imageUrl={amarnathPic}
+                name="S K Amarnath"
+                description="Jawahar Navodaya Vidyalaya, NIT - Karnataka, computer scientist, software architect"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="section is-flex is-flex-direction-column is-align-items-center has-background-primary-light">
-        <h3 className="title">Try It Out - It&apos;s Free</h3>
+        <h3 className="title">Check It Out - It&apos;s Free</h3>
         <ul className={classNames(styles.stepsToTry, "is-size-5")}>
           <li>Sign in and create your content</li>
           <li>
@@ -82,6 +105,17 @@ function IndexPage() {
           <li>Visualize and analyze each user&apos;s learning journey</li>
         </ul>
         <div className="block" />
+        <div className="columns">
+          <div className="column">
+            <p className="notification is-warning is-light">
+              DialogForm is <b>free</b> to use. However, we do incur a cost to
+              run our infrastructure, and this cost grows as users grow. If
+              you&apos;re using this for more than a couple of hundred users,
+              you could help us cover our infrastructure cost. Write to us at{" "}
+              <a href="mailto:hi@madamcurious.com">hi@madamcurious.com</a>
+            </p>
+          </div>
+        </div>
         <div className="block" />
         <a
           href="https://admin.dialogform.in"

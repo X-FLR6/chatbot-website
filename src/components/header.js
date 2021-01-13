@@ -9,17 +9,17 @@ function Header() {
         <div className="navbar-item">
           <HeaderBrand />
         </div>
-        <a
-          role="button"
-          className="navbar-burger"
-          aria-label="menu"
-          aria-expanded="false"
-          data-target="navbarBasicExample"
-        >
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
-        </a>
+        {/*<a*/}
+        {/*  role="button"*/}
+        {/*  className="navbar-burger"*/}
+        {/*  aria-label="menu"*/}
+        {/*  aria-expanded="false"*/}
+        {/*  data-target="navbarBasicExample"*/}
+        {/*>*/}
+        {/*  <span aria-hidden="true" />*/}
+        {/*  <span aria-hidden="true" />*/}
+        {/*  <span aria-hidden="true" />*/}
+        {/*</a>*/}
       </div>
     </nav>
   );

@@ -1,10 +1,12 @@
 import "./mystyles.scss";
 
+import classNames from "classnames";
 import React from "react";
 
 import DemoChatButton from "../components/demo-chat-button";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import styles from "./index.module.css";
 
 function IndexPage() {
   return (
@@ -22,10 +24,15 @@ function IndexPage() {
       </section>
       <div className="hero has-background-primary-light has-text-primary-dark">
         <div className="hero-body is-flex is-justify-content-center">
-          <ul className="is-size-5">
-            <li>Delight users with highly interactive content.</li>
-            <li>Leverage user responses to determine content flow.</li>
-            <li>Get deep insights into every user&apos;s learning journey.</li>
+          <ul
+            className={classNames(
+              styles.introFeatures,
+              "is-size-5 is-size-4-tablet"
+            )}
+          >
+            <li>Delight users with highly interactive content</li>
+            <li>Leverage user responses to determine content flow</li>
+            <li>Get deep insights into every user&apos;s learning journey</li>
           </ul>
         </div>
       </div>
@@ -58,14 +65,14 @@ function IndexPage() {
       </section>
       <section className="section is-flex is-flex-direction-column is-align-items-center has-background-primary-light">
         <h3 className="title">Try It Out - It&apos;s Free</h3>
-        <ol className="is-size-5">
+        <ul className={classNames(styles.stepsToTry, "is-size-5")}>
           <li>Sign in and create your content</li>
           <li>
             Embed in your LMS (we&apos;ll work with your user IDs) or share via
             links
           </li>
           <li>Visualize and analyze each user&apos;s learning journey</li>
-        </ol>
+        </ul>
         <div className="block" />
         <div className="block" />
         <a

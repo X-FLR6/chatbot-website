@@ -2,6 +2,7 @@ import "./mystyles.scss";
 
 import classNames from "classnames";
 import React from "react";
+import { BsChatQuoteFill } from "react-icons/bs";
 
 import AdminScreenshot from "../components/admin-screenshot";
 import DemoChatButton from "../components/demo-chat-button";
@@ -19,39 +20,62 @@ function IndexPage() {
       <section className="hero is-primary is-bold">
         <div className="hero-body">
           <div className="container">
+            <BsChatQuoteFill className={styles.logo} />
             <h1 className="title">DialogForm</h1>
             <h3 className="subtitle">
-              Build conversational style e-Learning content
+              Build conversational e-Learning content
             </h3>
           </div>
         </div>
       </section>
-      <div className="section has-background-primary-light has-text-primary-dark">
-        <div className={classNames(styles.screenshotContainer, "container")}>
+      <section className="section has-background-primary-light has-text-primary-dark">
+        <div className="container">
           <div className="columns">
             <div className="column is-10-widescreen is-offset-1-widescreen is-8-fullhd is-offset-2-fullhd">
               <AdminScreenshot />
             </div>
           </div>
           <div className="block" />
+          <div className="is-size-5">
+            <p className="block">
+              DialogForm is a tool for creating engaging e-Learning content in
+              the form of conversations between the teacher and the user.
+            </p>
+            <p className="block">
+              Create entire lessons, or even just supplement your existing
+              lessons with natural, free-flowing conversational assessments or
+              explanations that keep the user engaged, and provide you as the
+              teacher with fine-grained control over personalizing and analyzing
+              the user&apos;s learning journey.
+            </p>
+          </div>
+          <div className="block" />
           <div className="is-flex is-flex-direction-column is-align-items-center">
-            <ul
-              className={classNames(
-                styles.introFeatures,
-                "is-size-5 is-size-4-tablet"
-              )}
-            >
-              <li>Delight users with highly interactive content</li>
-              <li>Leverage user responses to determine content flow</li>
-              <li>Get deep insights into every user&apos;s learning journey</li>
-            </ul>
-            <div className="block" />
-            <div className="block" />
             <DemoChatButton />
           </div>
         </div>
-      </div>
-      <section className="section">
+      </section>
+      <section className="section is-flex is-flex-direction-column is-align-items-center">
+        <h3 className="title">Features</h3>
+        <ul className={classNames(styles.features, "is-size-5")}>
+          <li>Present content as natural, free flowing conversations</li>
+          <li>
+            Check understanding using questions within the flow of the
+            conversation
+          </li>
+          <li>Allow multiple attempts on the same question</li>
+          <li>
+            Provide relevant and timely feedback to correct misconceptions and
+            ensure success of the overall lesson delivery
+          </li>
+          <li>Score using varied scoring algorithms suited to outcomes</li>
+          <li>Personalize each student&apos;s learning journey</li>
+          <li>
+            Access advanced analytics to understand gaps and improve performance
+          </li>
+        </ul>
+      </section>
+      <section className="section has-background-primary-light">
         <div className="container">
           <h3 className="title has-text-centered">Motivation</h3>
           <p className="block">
@@ -94,36 +118,50 @@ function IndexPage() {
           </div>
         </div>
       </section>
-      <section className="section is-flex is-flex-direction-column is-align-items-center has-background-primary-light">
-        <h3 className="title">Check It Out - It&apos;s Free</h3>
-        <ul className={classNames(styles.stepsToTry, "is-size-5")}>
-          <li>Sign in and create your content</li>
-          <li>
-            Embed in your LMS (we&apos;ll work with your user IDs) or share via
-            links
-          </li>
-          <li>Visualize and analyze each user&apos;s learning journey</li>
-        </ul>
-        <div className="block" />
-        <div className="columns">
-          <div className="column">
-            <p className="notification is-warning is-light">
-              DialogForm is <b>free</b> to use. However, we do incur a cost to
-              run our infrastructure, and this cost grows as users grow. If
-              you&apos;re using this for more than a couple of hundred users,
-              you could help us cover our infrastructure cost. Write to us at{" "}
-              <a href="mailto:hi@madamcurious.com">hi@madamcurious.com</a>
-            </p>
+      <section className="section has-background-primary-light">
+        <div className="container is-flex is-flex-direction-column is-align-items-center">
+          <h3 className="title">Try It</h3>
+          <p className="is-size-5">
+            Sign in, create your content and embed in your Learning Management
+            System in minutes
+          </p>
+          <div className="block" />
+          <a
+            href="https://admin.dialogform.in"
+            className="button is-primary is-large"
+          >
+            Launch DialogForm
+          </a>
+          <div className="block" />
+          <div className="columns">
+            <div className="column">
+              <p className="notification is-warning is-light">
+                DialogForm is <b>free</b> to use. However, we do incur a cost to
+                run our infrastructure, and this cost grows as users grow. If
+                you&apos;re using this for more than a couple of hundred users,
+                you could help us cover our infrastructure cost. Write to us at{" "}
+                <a href="mailto:saumya.kanoria@madamcurious.com">
+                  saumya.kanoria@gmail.com
+                </a>
+              </p>
+            </div>
           </div>
         </div>
-        <div className="block" />
-        <a
-          href="https://admin.dialogform.in"
-          className="button is-primary is-large"
-        >
-          Launch DialogForm
-        </a>
       </section>
+      <footer className="footer is-flex is-justify-content-center">
+        <a
+          className="is-link mx-3 is-uppercase"
+          href="https://docs.dialogform.in"
+        >
+          Documentation
+        </a>
+        <a
+          className="is-link mx-3 is-uppercase"
+          href="https://admin.dialogform.in"
+        >
+          Console
+        </a>
+      </footer>
     </Layout>
   );
 }

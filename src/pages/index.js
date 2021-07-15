@@ -120,7 +120,7 @@ function IndexPage() {
       </section>
       <section className="section has-background-primary-light">
         <div className="container is-flex is-flex-direction-column is-align-items-center">
-          <h3 className="title">Try It</h3>
+          <h3 className="title">Get Started</h3>
           <p className="is-size-5">
             Sign in, create your content and embed in your Learning Management
             System in minutes
@@ -136,13 +136,8 @@ function IndexPage() {
           <div className="columns">
             <div className="column">
               <p className="notification is-warning is-light">
-                DialogForm is <b>free</b> to use. However, we do incur a cost to
-                run our infrastructure, and this cost grows as users grow. If
-                you&apos;re using this for more than a couple of hundred users,
-                you could help us cover our infrastructure cost. Write to us at{" "}
-                <a href="mailto:saumya.kanoria@madamcurious.com">
-                  saumya.kanoria@gmail.com
-                </a>
+                Have questions? Write to us at{" "}
+                <a href="mailto:svk@dialogform.in">svk@dialogform.in</a>
               </p>
             </div>
           </div>

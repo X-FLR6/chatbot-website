@@ -12,6 +12,7 @@ import SEO from "../components/seo";
 import amarnathPic from "../images/amarnath.png";
 import saumyaPic from "../images/saumya.png";
 import styles from "./index.module.css";
+import { Link } from "gatsby";
 
 function IndexPage() {
   return (
@@ -156,12 +157,9 @@ function IndexPage() {
         >
           Console
         </a>
-        <a
-          className="is-link mx-3 is-uppercase"
-          href="https://www.iubenda.com/privacy-policy/93104698"
-        >
+        <Link className="is-link mx-3 is-uppercase" to="/privacy">
           Privacy
-        </a>
+        </Link>
       </footer>
     </Layout>
   );

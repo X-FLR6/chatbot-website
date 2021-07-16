@@ -156,6 +156,12 @@ function IndexPage() {
         >
           Console
         </a>
+        <a
+          className="is-link mx-3 is-uppercase"
+          href="https://www.iubenda.com/privacy-policy/93104698"
+        >
+          Privacy
+        </a>
       </footer>
     </Layout>
   );

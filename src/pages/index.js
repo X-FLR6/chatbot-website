@@ -1,6 +1,7 @@
 import "./mystyles.scss";
 
 import classNames from "classnames";
+import { Link } from "gatsby";
 import React from "react";
 import { BsChatQuoteFill } from "react-icons/bs";
 
@@ -8,11 +9,24 @@ import AdminScreenshot from "../components/admin-screenshot";
 import DemoChatButton from "../components/demo-chat-button";
 import Layout from "../components/layout";
 import MemberProfile from "../components/member-profile";
+import PricingPlan from "../components/pricing-plan";
 import SEO from "../components/seo";
 import amarnathPic from "../images/amarnath.png";
 import saumyaPic from "../images/saumya.png";
 import styles from "./index.module.css";
-import { Link } from "gatsby";
+
+const COMMON_FEATURES = [
+  "-",
+  "Unlimited content",
+  "Unlimited branching logic",
+  "Auto max-score calculation",
+  "Share content via link",
+  "Embed content in any website",
+  "View & analyze conversations",
+  "Analyze drop-off rates",
+  "Scoring algorithms to suit various outcomes",
+  "Give feedback at any point in a conversation",
+];
 
 function IndexPage() {
   return (
@@ -124,22 +138,65 @@ function IndexPage() {
           <h3 className="title">Get Started</h3>
           <p className="is-size-5">
             Sign in, create your content and embed in your Learning Management
-            System in minutes
+            System in minutes.
+          </p>
+          <div className="block" />
+          <p className="is-size-5 has-text-grey">
+            There is no time limit on the <b>fully functional</b> free plan. See
+            all of our pricing plans below.
           </p>
           <div className="block" />
           <a
             href="https://admin.dialogform.in"
             className="button is-primary is-large"
+            target="_blank"
+            rel="noreferrer"
           >
-            Launch DialogForm
+            Get Started For Free
           </a>
-          <div className="block" />
-          <div className="columns">
-            <div className="column">
-              <p className="notification is-warning is-light">
-                Have questions? Write to us at{" "}
-                <a href="mailto:svk@dialogform.in">svk@dialogform.in</a>
-              </p>
+        </div>
+      </section>
+      <section className="section">
+        <div className="container">
+          <h3 className="title has-text-centered">Pricing</h3>
+          <div className="columns is-centered">
+            <div className="column is-4 is-3-widescreen">
+              <PricingPlan
+                name="Free"
+                price="Free"
+                features={["100 conversations", ...COMMON_FEATURES]}
+              />
+            </div>
+            <div className="column is-4 is-3-widescreen">
+              <PricingPlan
+                name="Basic"
+                currency="Rs."
+                price="2000"
+                interval="month"
+                features={["500 conversations", ...COMMON_FEATURES]}
+              />
+            </div>
+            <div className="column is-4 is-3-widescreen">
+              <PricingPlan
+                name="Plus"
+                currency="Rs."
+                price="5000"
+                interval="month"
+                features={["2000 conversations", ...COMMON_FEATURES]}
+              />
+            </div>
+          </div>
+          <div className="columns is-centered">
+            <div className="column is-12 is-9-widescreen">
+              <div className="card has-background-info-light">
+                <div className="card-content">
+                  To purchase a plan, to design a custom plan to suit your
+                  needs, or for any other questions,
+                  <br />
+                  write to us at{" "}
+                  <a href="mailto:svk@dialogform.in">svk@dialogform.in</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

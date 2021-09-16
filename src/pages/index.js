@@ -12,6 +12,7 @@ import MemberProfile from "../components/member-profile";
 import PricingPlan from "../components/pricing-plan";
 import SEO from "../components/seo";
 import amarnathPic from "../images/amarnath.png";
+import rajatPic from "../images/rajat.png";
 import saumyaPic from "../images/saumya.png";
 import styles from "./index.module.css";
 
@@ -128,6 +129,13 @@ function IndexPage() {
                 imageUrl={amarnathPic}
                 name="S K Amarnath"
                 description="Jawahar Navodaya Vidyalaya, NIT - Karnataka, computer scientist, software architect"
+              />
+            </div>
+            <div className="column">
+              <MemberProfile
+                imageUrl={rajatPic}
+                name="Rajat Toshniwal"
+                description="Indian Institute of Technology, teacher, educator, entrepreneur"
               />
             </div>
           </div>

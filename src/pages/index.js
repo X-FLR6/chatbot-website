@@ -202,7 +202,7 @@ function IndexPage() {
                   needs, or for any other questions,
                   <br />
                   write to us at{" "}
-                  <a href="mailto:svk@dialogform.in">svk@dialogform.in</a>
+                  <a href="mailto:hi@dialogform.in">hi@dialogform.in</a>
                 </div>
               </div>
             </div>

@@ -2,7 +2,8 @@ import "./mystyles.scss";
 
 import classNames from "classnames";
 import { Link } from "gatsby";
-import React from "react";
+import PropTypes from "prop-types";
+import React, { useState } from "react";
 import { BsChatQuoteFill } from "react-icons/bs";
 
 import AdminScreenshot from "../components/admin-screenshot";
@@ -16,20 +17,84 @@ import rajatPic from "../images/rajat.png";
 import saumyaPic from "../images/saumya.png";
 import styles from "./index.module.css";
 
-const COMMON_FEATURES = [
-  "-",
-  "Unlimited content",
-  "Unlimited branching logic",
-  "Auto max-score calculation",
-  "Share content via link",
-  "Embed content in any website",
-  "View & analyze conversations",
-  "Analyze drop-off rates",
-  "Scoring algorithms to suit various outcomes",
-  "Give feedback at any point in a conversation",
-];
+function NoServiceInterruptionModal({ isActive, onCloseClick }) {
+  return (
+    <div className={classNames("modal", { "is-active": isActive })}>
+      <div className="modal-background" onClick={onCloseClick} />
+      <div className="modal-content">
+        <div className="card">
+          <div className="card-content">
+            <div className="block">
+              If you go above the monthly chat limit, we will contact you to
+              upgrade your plan. Until your plan is upgraded, you will be
+              continue to be charged at the rate of your current plan, no matter
+              how much you go over the limit, and your service will not be
+              interrupted.
+            </div>
+            <div className="block">
+              We trust that you will work with us to upgrade your plan as and
+              when necessary.
+            </div>
+          </div>
+          <footer className="card-footer">
+            <a
+              href="#"
+              className="card-footer-item"
+              onClick={(event) => {
+                event.preventDefault();
+                onCloseClick();
+              }}
+            >
+              Close
+            </a>
+          </footer>
+        </div>
+      </div>
+      <button
+        className="modal-close is-large"
+        aria-label="close"
+        onClick={onCloseClick}
+      />
+    </div>
+  );
+}
+
+NoServiceInterruptionModal.propTypes = {
+  isActive: PropTypes.bool.isRequired,
+  onCloseClick: PropTypes.func.isRequired,
+};
 
 function IndexPage() {
+  const [
+    isNoServiceInterruptionModalActive,
+    setIsNoServiceInterruptionModalActive,
+  ] = useState(false);
+
+  const COMMON_FEATURES = [
+    <div key="no-service-interruption">
+      <div className="has-text-success-dark">
+        No service interruption if limit crossed
+      </div>
+      <button
+        className="button is-small is-fullwidth is-success is-light mt-1"
+        style={{ height: "1.5em" }}
+        onClick={() => setIsNoServiceInterruptionModalActive(true)}
+      >
+        How does this work?
+      </button>
+    </div>,
+    "#Common to all plans",
+    "Unlimited content",
+    "Unlimited branching logic",
+    "Auto max-score calculation",
+    "Share content via link",
+    "Embed content in any website",
+    "View & analyze conversations",
+    "Analyze drop-off rates",
+    "Scoring algorithms to suit various outcomes",
+    "Give feedback at any point in a conversation",
+  ];
+
   return (
     <Layout>
       <SEO title="Home" />
@@ -172,7 +237,7 @@ function IndexPage() {
               <PricingPlan
                 name="Free"
                 price="Free"
-                features={["100 conversations", ...COMMON_FEATURES]}
+                features={["100 chats/month", ...COMMON_FEATURES]}
               />
             </div>
             <div className="column is-4 is-3-widescreen">
@@ -181,7 +246,7 @@ function IndexPage() {
                 currency="Rs."
                 price="2000"
                 interval="month"
-                features={["500 conversations", ...COMMON_FEATURES]}
+                features={["1000 chats/month", ...COMMON_FEATURES]}
               />
             </div>
             <div className="column is-4 is-3-widescreen">
@@ -190,7 +255,7 @@ function IndexPage() {
                 currency="Rs."
                 price="5000"
                 interval="month"
-                features={["2000 conversations", ...COMMON_FEATURES]}
+                features={["5000 chats/month", ...COMMON_FEATURES]}
               />
             </div>
           </div>
@@ -226,6 +291,10 @@ function IndexPage() {
           Privacy
         </Link>
       </footer>
+      <NoServiceInterruptionModal
+        isActive={isNoServiceInterruptionModalActive}
+        onCloseClick={() => setIsNoServiceInterruptionModalActive(false)}
+      />
     </Layout>
   );
 }

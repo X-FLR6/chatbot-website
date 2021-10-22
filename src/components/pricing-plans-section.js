@@ -83,7 +83,7 @@ function PricingPlansSection() {
   ];
 
   return (
-    <section className="section">
+    <section id="pricing-plans" className="section">
       <div className="container">
         <h3 className="title has-text-centered">Pricing Plans</h3>
         <div className="columns is-centered">

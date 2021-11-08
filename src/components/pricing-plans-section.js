@@ -82,6 +82,12 @@ function PricingPlansSection() {
     "Give feedback at any point in a conversation",
   ];
 
+  const isIndia = Intl.DateTimeFormat()
+    .resolvedOptions()
+    .timeZone?.includes("Calcutta");
+
+  const currency = isIndia ? "INR" : "USD";
+
   return (
     <section id="pricing-plans" className="section">
       <div className="container">
@@ -98,8 +104,8 @@ function PricingPlansSection() {
           <div className="column is-4 is-3-widescreen">
             <PricingPlan
               name="Basic"
-              currency="Rs."
-              price="2000"
+              currency={currency}
+              price={isIndia ? "2000" : "30"}
               interval="month"
               features={["1000 chats/month", ...COMMON_FEATURES]}
             />
@@ -107,8 +113,8 @@ function PricingPlansSection() {
           <div className="column is-4 is-3-widescreen">
             <PricingPlan
               name="Plus"
-              currency="Rs."
-              price="5000"
+              currency={currency}
+              price={isIndia ? "5000" : "75"}
               interval="month"
               features={["5000 chats/month", ...COMMON_FEATURES]}
             />

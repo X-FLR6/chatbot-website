@@ -16,7 +16,7 @@ function PricingPlan({ name, currency, price, interval, features }) {
       <div className="card-content">
         <div className="is-size-4 has-text-primary-dark">{name}</div>
         <div className="is-flex is-align-items-baseline">
-          <div className="is-size-2">
+          <div className="is-size-3">
             {currency ? `${currency} ` : ""}
             {price}
           </div>

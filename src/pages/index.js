@@ -7,6 +7,7 @@ import { BsChatQuoteFill } from "react-icons/bs";
 
 import AdminScreenshot from "../components/admin-screenshot";
 import DemoChatButton from "../components/demo-chat-button";
+import { Faq, FaqQuestion, FaqResponse } from "../components/faq";
 import Layout from "../components/layout";
 import MemberProfile from "../components/member-profile";
 import PricingPlansSection from "../components/pricing-plans-section";
@@ -152,6 +153,48 @@ function IndexPage() {
         </div>
       </section>
       <PricingPlansSection />
+      <section className="section has-background-primary-light">
+        <div className="container">
+          <h3 className="title has-text-centered">FAQs</h3>
+          <h4 className="subtitle has-text-primary-dark">
+            Pricing Plan Questions
+          </h4>
+          <Faq id="chat-definition">
+            <FaqQuestion>
+              What exactly is a <b>chat</b>?
+            </FaqQuestion>
+            <FaqResponse>
+              <p className="block">
+                One user interacting with some DialogForm content{" "}
+                <b>until it concludes</b>, is considered one chat.
+              </p>
+              <p className="block">
+                For instance, if you click on the &lsquo;See an Example&rsquo;
+                button above and interact with the content, that would be one
+                chat. It doesn&apos;t matter how long the content is, it&apos;s
+                still one single chat until it ends.
+              </p>
+            </FaqResponse>
+          </Faq>
+          <Faq id="no-service-interruption">
+            <FaqQuestion>
+              What happens if I go over my chat quota for the month?
+            </FaqQuestion>
+            <FaqResponse>
+              <p className="block">
+                DialogForm will continue to work for you and your users as
+                usual, no matter how much you go over the limit!
+              </p>
+              <p className="block">
+                We will contact you to upgrade to a higher plan, or to a custom
+                plan designed as per your needs. Until you do, you will continue
+                to be charged at the rate of your current plan. We trust that
+                you will work with us to upgrade your plan as and when required.
+              </p>
+            </FaqResponse>
+          </Faq>
+        </div>
+      </section>
       <footer className="footer is-flex is-justify-content-center">
         <a
           className="is-link mx-3 is-uppercase"

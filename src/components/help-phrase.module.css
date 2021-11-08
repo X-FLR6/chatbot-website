@@ -1,0 +1,12 @@
+.root {
+  cursor: pointer;
+  text-decoration: underline dotted;
+}
+
+.root:hover {
+  filter: brightness(85%);
+}
+
+.root, .root:hover, .root:focus, .root:active {
+  color: inherit;
+}

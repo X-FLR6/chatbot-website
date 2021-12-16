@@ -1,3 +1,9 @@
+# DialogForm Website
+
+## Setup
+
+We use Node version 15. Higher than this does not work.
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">

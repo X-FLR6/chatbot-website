@@ -161,7 +161,10 @@ function IndexPage() {
               </GetStarted>
             </div>
             <div className="column">
-              <GetStarted title="Custom" link="dummy">
+              <GetStarted
+                title="Custom"
+                link="https://docs.dialogform.in/using-dialogform-with-other-lmses"
+              >
                 Using another Learning Management System or building your own?
                 Integrate DialogForm with embed code, share links and webhooks.
               </GetStarted>

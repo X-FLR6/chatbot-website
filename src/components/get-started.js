@@ -20,7 +20,12 @@ function GetStarted({ title, link, buttonText, children }) {
       <div className="mb-5 is-flex-grow-1">{children}</div>
       <div className="has-text-centered">
         {link ? (
-          <a className={commonButtonClasses} href={link}>
+          <a
+            className={commonButtonClasses}
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+          >
             {effectiveButtonText}
           </a>
         ) : (

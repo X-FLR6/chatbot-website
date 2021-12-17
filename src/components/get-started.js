@@ -6,7 +6,7 @@ import styles from "./get-started.module.css";
 
 function GetStarted({ title, link, buttonText, children }) {
   const effectiveButtonText = buttonText ?? "Get Started";
-  const commonButtonClasses = "button is-large is-primary is-outlined";
+  const commonButtonClasses = "button is-large is-primary";
   return (
     <div
       className={classNames(

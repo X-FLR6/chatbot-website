@@ -34,7 +34,7 @@ function DemoChatButton({ className }) {
         />
       </div>
       <button
-        className={classNames("button is-large", className)}
+        className={classNames("button is-large is-primary", className)}
         onClick={() => setIsModalActive(true)}
       >
         See an Example

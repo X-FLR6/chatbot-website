@@ -6,17 +6,15 @@ import { MdHelpOutline } from "react-icons/all";
 import styles from "./help-indicator.module.css";
 
 function HelpIndicator({ className, href }) {
-  return (
-    <a
-      className={classNames(
-        "has-text-grey-light",
-        { [styles.hasHref]: href },
-        className
-      )}
-      href={href}
-    >
+  const commonClasses = ["has-text-grey-light", className];
+  return href ? (
+    <a className={classNames(...commonClasses, styles.hasHref)} href={href}>
       <MdHelpOutline />
     </a>
+  ) : (
+    <span className={classNames(...commonClasses)}>
+      <MdHelpOutline />
+    </span>
   );
 }
 

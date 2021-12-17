@@ -8,6 +8,7 @@ import { BsChatQuoteFill } from "react-icons/bs";
 import AdminScreenshot from "../components/admin-screenshot";
 import DemoChatButton from "../components/demo-chat-button";
 import { Faq, FaqQuestion, FaqResponse } from "../components/faq";
+import GetStarted from "../components/get-started";
 import Layout from "../components/layout";
 import MemberProfile from "../components/member-profile";
 import PricingPlansSection from "../components/pricing-plans-section";
@@ -131,25 +132,41 @@ function IndexPage() {
       </section>
       <section className="section has-background-primary-light">
         <div className="container is-flex is-flex-direction-column is-align-items-center">
-          <h3 className="title">Get Started</h3>
-          <p className="is-size-5">
-            Sign in, create your content and embed in your Learning Management
-            System in minutes.
-          </p>
+          <h3 className="title">Get Started for Free</h3>
           <div className="block" />
-          <p className="is-size-5 has-text-grey">
+          <h4 className="is-size-5 has-text-grey">
             There is no time limit on the <b>fully functional</b> free plan. See
-            all of our pricing plans below.
-          </p>
+            all our pricing plans below.
+          </h4>
           <div className="block" />
-          <a
-            href="https://admin.dialogform.in"
-            className="button is-primary is-large"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Get Started For Free
-          </a>
+          <div className="columns">
+            <div className="column">
+              <GetStarted
+                title="Thinkific"
+                link="https://docs.dialogform.in/using-dialogform-with-thinkific"
+              >
+                <b>
+                  We&apos;re proud to say that we are now part of
+                  Thinkific&apos;s App Store!
+                </b>{" "}
+                To start building Thinkific lesson content with DialogForm,
+                simply install our app with one click.
+              </GetStarted>
+            </div>
+            <div className="column">
+              <GetStarted title="LTI Integration" buttonText="Coming Soon">
+                If your Learning Management System supports LTI 1.3/Advantage
+                (for example Moodle, Canvas, Blackboard, D2L and Sakai), just
+                add DialogForm as an external LTI tool.
+              </GetStarted>
+            </div>
+            <div className="column">
+              <GetStarted title="Custom" link="dummy">
+                Using another Learning Management System or building your own?
+                Integrate DialogForm with embed code, share links and webhooks.
+              </GetStarted>
+            </div>
+          </div>
         </div>
       </section>
       <PricingPlansSection />

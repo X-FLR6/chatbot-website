@@ -4,6 +4,8 @@
 
 We use Node version 15. Higher than this does not work.
 
+Also, we are using Yarn v1, not npm. So run `npm install -g yarn`.
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">

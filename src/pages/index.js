@@ -44,7 +44,7 @@ function IndexPage() {
           <div className="is-size-5">
             <p className="block">
               DialogForm is a tool for creating engaging e-Learning content in
-              the form of conversations between the teacher and the user.
+              the form of conversations between a teacher and the user.
             </p>
             <p className="block">
               Create entire lessons, or even just supplement your existing
@@ -108,16 +108,16 @@ function IndexPage() {
           <div className="columns">
             <div className="column">
               <MemberProfile
-                imageUrl={saumyaPic}
-                name="Saumya Kanoria"
-                description="Cornell University, U of Illinois Urbana Champaign, computer scientist, entrepreneur"
+                imageUrl={amarnathPic}
+                name="S K Amarnath"
+                description="Jawahar Navodaya Vidyalaya, NIT - Karnataka, computer scientist, software architect"
               />
             </div>
             <div className="column">
               <MemberProfile
-                imageUrl={amarnathPic}
-                name="S K Amarnath"
-                description="Jawahar Navodaya Vidyalaya, NIT - Karnataka, computer scientist, software architect"
+                imageUrl={saumyaPic}
+                name="Saumya Kanoria"
+                description="Cornell University, U of Illinois Urbana Champaign, computer scientist, entrepreneur"
               />
             </div>
             <div className="column">
@@ -185,14 +185,17 @@ function IndexPage() {
             </FaqQuestion>
             <FaqResponse>
               <p className="block">
-                One user interacting with some DialogForm content{" "}
-                <b>until it concludes</b>, is considered one chat.
+                One user interacting with some DialogForm content, from the
+                start of the interaction <b>until it concludes</b> (i.e. no
+                further response is expected from the user), is considered one
+                chat.
               </p>
               <p className="block">
                 For instance, if you click on the &lsquo;See an Example&rsquo;
-                button above and interact with the content, that would be one
-                chat. It doesn&apos;t matter how long the content is, it&apos;s
-                still one single chat until it ends.
+                button above and interact with the content until no further
+                response is expected from you, that would be one chat. It
+                doesn&apos;t matter how long the interaction is, it&apos;s still
+                one single chat.
               </p>
             </FaqResponse>
           </Faq>
